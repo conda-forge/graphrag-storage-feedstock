@@ -1,8 +1,8 @@
 schema_version: 1
 
 context:
-  version: "3.1.1"
-  python_min: "3.11"
+  version: 3.1.2
+  python_min: '3.11'
 
 package:
   name: graphrag-storage
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/g/graphrag-storage/graphrag_storage-${{ version }}.tar.gz
-  sha256: 5bc0122d7b2de103c42e813018a4619c58f18e42af458b30637d58fb4a28ef47
+  sha256: e7a124aa89a88b8388a7d070f732a77825389f469a6ddb4c150d376854ddfedf
 
 build:
   number: 0
@@ -25,21 +25,20 @@ requirements:
   run:
     - python >=${{ python_min }},<3.14
     - aiofiles >=25.1,<26.dev0
-    - azure-cosmos >=4.9,<5.dev0
+    - azure-cosmos >=4.16,<5.dev0
     - azure-identity >=1.25,<2.dev0
-    - azure-storage-blob >=12.24,<13.dev0
-    - graphrag-common ==3.1.1
+    - azure-storage-blob >=12.30,<13.dev0
+    - graphrag-common ==3.1.2
     - pandas >=3.0,<4.dev0
-    - pydantic >=2.10,<3.dev0
-
+    - pydantic >=2.13,<3.dev0
 tests:
   - python:
       imports:
         - graphrag_storage
       pip_check: true
-      python_version: 
+      python_version:
         - ${{ python_min }}.*
-        - "*"
+        - '*'
 
 about:
   summary: GraphRAG storage package.
