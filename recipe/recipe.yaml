@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: 3.1.2
+  version: 3.3.0
   python_min: '3.11'
 
 package:
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/g/graphrag-storage/graphrag_storage-${{ version }}.tar.gz
-  sha256: e7a124aa89a88b8388a7d070f732a77825389f469a6ddb4c150d376854ddfedf
+  sha256: d8940668e0c7ada7ab9b85b76721caf278bc2ab30f85482fdc76e257c9f1fa82
 
 build:
   number: 0
@@ -28,7 +28,7 @@ requirements:
     - azure-cosmos >=4.16,<5.dev0
     - azure-identity >=1.25,<2.dev0
     - azure-storage-blob >=12.30,<13.dev0
-    - graphrag-common ==3.1.2
+    - graphrag-common ==3.3.0
     - pandas >=3.0,<4.dev0
     - pydantic >=2.13,<3.dev0
 tests:
